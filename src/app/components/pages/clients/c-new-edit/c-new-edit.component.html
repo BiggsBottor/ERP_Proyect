@@ -1,0 +1,43 @@
+<div [ngSwitch]="main.page" class="mt-5 mx-5">
+    <h3 *ngSwitchCase="'c-new'">New Client</h3>
+    <h3 *ngSwitchCase="'c-edit'">Edit Client</h3>
+</div>
+<form [formGroup]="forma" #f="ngForm" (ngSubmit)="onSubmit()"
+      class="m-5 form-row justify-content-center">    
+    <div class="form-group col-6">
+        <label for="First">First</label>
+        <input [value]="main.selectedClient.firstName"
+               formControlName="firstName" 
+               id="First" class="form-control" type="text"
+               placeholder="Frist name">
+    </div>
+    <div class="form-group col-6">
+        <label for="Last">Last</label>
+        <input [value]="main.selectedClient.lastName"
+               formControlName="lastName" 
+               id="Last" class="form-control" type="text"
+               placeholder="Last name">
+    </div>
+    <div class="form-group col-6">
+        <label for="City">City</label>
+        <input [value]="main.selectedClient.city"
+               formControlName="city"
+               id="City" class="form-control" type="text"
+               placeholder="City">
+    </div>
+    <div class="form-group col-6">
+        <label for="Country">Country</label>
+        <input [value]="main.selectedClient.country"
+               formControlName="country"
+               id="Country" class="form-control" type="text"
+               placeholder="Country">
+    </div>
+
+    <button (click)="cancel()"
+            type="button" class="btn btn-outline-secondary mr-2">Cancel</button>
+    <button [disabled]="!f.form.valid" [ngClass]="{'btn-disabled': !f.form.valid}"
+            class="btn btn-outline-success" type="submit">
+        Save
+    </button>
+
+</form>

@@ -1,0 +1,29 @@
+<table class="table table-dark m-5">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Image</th>
+        <th scope="col">Description</th>
+        <th scope="col">Stock</th>
+        <th scope="col" class=" justify-content-center">
+          <button (click)="main.editProduct('p-new')" class="btn btn-outline-primary" type="button">new</button>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products; let i = index">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ product.productName }}</td>
+        <!-- <td><img class="images img-fluid" src="assets/img/no-image.png"></td>  img [src]="getImgName(product.productName)" -->
+        <td><img class="images img-fluid" [src]="getImgName(product.productName)"></td>
+        <td>{{ product.description }}</td>
+        <td>{{ product.stock }}</td>
+        <td>
+          <button (click)="main.editProduct('p-edit', product)"
+                  class="btn btn-outline-light mr-2" type="button">edit</button>
+          <button class="btn btn-outline-danger" type="button">delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>

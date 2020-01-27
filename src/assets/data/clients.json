@@ -1,0 +1,28 @@
+[{
+    "id": "0000",
+    "firstName": "Harold",
+    "lastName": "Raimy",
+    "city": "New York",
+    "country": "USA"
+},
+{
+    "id": "0001",
+    "firstName": "Carlos",
+    "lastName": "Herrera",
+    "city": "Barcelona",
+    "country": "ESP"
+},
+{
+    "id": "0002",
+    "firstName": "Mark",
+    "lastName": "Otto",
+    "city": "London",
+    "country": "ENG"
+},
+{
+    "id": "0003",
+    "firstName": "Larry",
+    "lastName": "the Bird",
+    "city": "Los Angeles",
+    "country": "USA"
+}]
